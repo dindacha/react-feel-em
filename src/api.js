@@ -12,7 +12,6 @@ export const getMovieList = async() => {
         console.error(error);
         return [];
     }
-
 }
 
 export const searchMovie = async(q) => {

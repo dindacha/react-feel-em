@@ -15,7 +15,7 @@ const App = () => {
   }, [])
 
   const PopularMovieList = () => {
-    return popularMovies && popularMovies.map((movie, i) => {
+    return popularMovies.map((movie, i) => {
       return (
           <div className='Movie-wrapper' key={i}>
             <div className='Movie-title'>{movie.title}</div>
@@ -40,8 +40,8 @@ const App = () => {
         <h1>feel-em</h1>
         <input 
           placeholder='cari film kesayangan' 
-          className='movie-search'
-          onChange={({target}) => search(target.value) }></input>
+          className='Movie-search'
+          onChange={({ target }) => search(target.value) }></input>
         <div className='Movie-container'>
           <PopularMovieList/>
         </div>
