@@ -1,9 +1,7 @@
 
-
 import './App.css';
 import { getMovieList, searchMovie} from "./api";
 import { useEffect, useState } from 'react';
-
 
 const App = () => {
   const [popularMovies, setPopularMovies] = useState ([])
@@ -32,7 +30,6 @@ const App = () => {
       const query = await searchMovie(q)
       setPopularMovies(query.results)
     }
-
   }
   return (
     <div className="App">
@@ -42,9 +39,21 @@ const App = () => {
           placeholder='cari film kesayangan' 
           className='Movie-search'
           onChange={({ target }) => search(target.value) }></input>
-        <div className='Movie-container'>
-          <PopularMovieList/>
-        </div>
+        
+ 
+        <h1>POPULAR MOVIES</h1>
+          <div className='Movie-container'>
+            <PopularMovieList/>
+          </div>
+        
+
+     
+        <h1>BEST MOVIES</h1>
+          <div className='Movie-container'>
+            <PopularMovieList/>
+          </div>
+        
+
       </header>
     </div>
   );
